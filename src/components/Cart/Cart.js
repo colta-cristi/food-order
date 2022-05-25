@@ -9,11 +9,11 @@ const Cart = props => {
   const cartCtx = useContext(cartContext);
 
   const addHandler = item => {
-    //
+    cartCtx.addItem({ ...item, quantity: 1 });
   };
 
   const removeHandler = id => {
-    //
+    cartCtx.removeItem(id);
   };
 
   const items = cartCtx.items;
